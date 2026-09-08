@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Suchith Lal K — PHP Developer with 7+ years of web development experience in PHP, Laravel, CodeIgniter and MySQL.">
+  <title>Suchith Lal K | PHP Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#08111f;--panel:#0e1a2b;--panel2:#111f33;--text:#edf4ff;--muted:#9fb0c7;--accent:#66e3b4;--accent2:#6ea8ff;--line:rgba(255,255,255,.10)}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,sans-serif;background:radial-gradient(circle at 80% 0%,rgba(110,168,255,.16),transparent 32%),var(--bg);color:var(--text);line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    .container{width:min(1120px,92%);margin:auto}
+    nav{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(8,17,31,.76);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+    .nav-inner{height:70px;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-family:"Space Grotesk";font-weight:700;font-size:1.25rem}.logo span{color:var(--accent)}
+    .navlinks{display:flex;gap:26px;color:var(--muted);font-size:.93rem}.navlinks a:hover{color:var(--text)}
+    .hero{min-height:100vh;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:60px;padding-top:80px}
+    .eyebrow{color:var(--accent);font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:.78rem}
+    h1{font-family:"Space Grotesk";font-size:clamp(3rem,7vw,6rem);line-height:.98;margin:18px 0}
+    h1 span{color:transparent;-webkit-text-stroke:1px var(--text)}
+    .hero p{color:var(--muted);max-width:650px;font-size:1.08rem}
+    .actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 19px;border-radius:12px;border:1px solid var(--line);font-weight:700}
+    .btn.primary{background:var(--accent);color:#062018;border-color:var(--accent)}.btn.secondary{background:rgba(255,255,255,.04)}
+    .portrait-wrap{position:relative;justify-self:end}.portrait{width:min(390px,75vw);aspect-ratio:4/5;object-fit:cover;border-radius:28px;filter:saturate(.95);border:1px solid var(--line);box-shadow:25px 25px 80px rgba(0,0,0,.35)}
+    .badge{position:absolute;bottom:-20px;left:-35px;background:var(--panel);border:1px solid var(--line);padding:16px 18px;border-radius:16px;box-shadow:0 15px 50px rgba(0,0,0,.3)}.badge strong{display:block;font-size:1.4rem}.badge small{color:var(--muted)}
+    section{padding:105px 0}.section-title{font-family:"Space Grotesk";font-size:2.2rem;margin-bottom:12px}.section-intro{color:var(--muted);max-width:700px;margin-bottom:35px}
+    .grid{display:grid;gap:18px}.skills{grid-template-columns:repeat(4,1fr)}.skill,.card{background:linear-gradient(145deg,rgba(255,255,255,.05),rgba(255,255,255,.025));border:1px solid var(--line);border-radius:18px;padding:22px}
+    .skill h3{font-size:1rem;margin-bottom:8px}.skill p,.card p{color:var(--muted);font-size:.93rem}
+    .experience{display:grid;gap:16px}.job{display:grid;grid-template-columns:190px 1fr;gap:30px;padding:25px 0;border-top:1px solid var(--line)}.job time{color:var(--accent);font-weight:700;font-size:.9rem}.job h3{font-size:1.1rem}.job .company{color:var(--muted);margin:3px 0 10px}.job ul{padding-left:20px;color:var(--muted)}.job li{margin:4px 0}
+    .projects{grid-template-columns:repeat(2,1fr)}.card h3{margin-bottom:9px}.tag{display:inline-block;margin-top:14px;margin-right:7px;padding:5px 9px;border-radius:999px;background:rgba(102,227,180,.08);border:1px solid rgba(102,227,180,.18);color:var(--accent);font-size:.75rem}
+    .achievements{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.stat{font-family:"Space Grotesk";font-size:2.4rem;color:var(--accent);font-weight:700}.contact{background:linear-gradient(135deg,rgba(102,227,180,.09),rgba(110,168,255,.09));border:1px solid var(--line);border-radius:28px;padding:45px;display:flex;justify-content:space-between;gap:30px;align-items:center}
+    footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:.85rem}.footer-inner{display:flex;justify-content:space-between;gap:20px}
+    @media(max-width:800px){.navlinks{display:none}.hero{grid-template-columns:1fr;padding-top:110px}.portrait-wrap{justify-self:center}.skills{grid-template-columns:repeat(2,1fr)}.projects,.achievements{grid-template-columns:1fr}.job{grid-template-columns:1fr;gap:7px}.contact{flex-direction:column;align-items:flex-start}.footer-inner{flex-direction:column}}
+    @media(max-width:480px){section{padding:75px 0}.skills{grid-template-columns:1fr}.hero h1{font-size:3.2rem}.badge{left:5px}}
+  </style>
+</head>
+<body>
+<nav><div class="container nav-inner"><a class="logo" href="#home">Suchith<span>.</span></a><div class="navlinks"><a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#contact">Contact</a></div></div></nav>
+
+<main id="home">
+  <div class="container hero">
+    <div>
+      <div class="eyebrow">PHP Developer · Kerala, India</div>
+      <h1>Building <span>web solutions</span> that work.</h1>
+      <p>Innovative, task-driven PHP developer with 7+ years of web development experience, focused on PHP, Laravel, CodeIgniter, MySQL, REST APIs and efficient web applications.</p>
+      <div class="actions">
+        <a class="btn primary" href="#projects">View Projects</a>
+        <a class="btn secondary" href="assets/Suchith_Lal_K_Resume.pdf" target="_blank">Download Resume</a>
+        <a class="btn secondary" href="mailto:suchithlalthavam@gmail.com">Email Me</a>
+      </div>
+    </div>
+    <div class="portrait-wrap">
+      <img class="portrait" src="assets/profile.jpg" alt="Suchith Lal K">
+      <div class="badge"><strong>7+ Years</strong><small>Web Development</small></div>
+    </div>
+  </div>
+
+  <section id="about"><div class="container">
+    <h2 class="section-title">About Me</h2>
+    <p class="section-intro">I specialize in creating efficient web applications and delivering solutions that cater to organizational needs through innovation and collaborative teamwork.</p>
+    <div class="achievements">
+      <div class="card"><div class="stat">20+</div><p>Client projects delivered across e-commerce, education and healthcare.</p></div>
+      <div class="card"><div class="stat">7+ yrs</div><p>Professional experience in web development.</p></div>
+    </div>
+  </div></section>
+
+  <section id="skills"><div class="container">
+    <h2 class="section-title">Technical Skills</h2>
+    <p class="section-intro">A practical full-stack web development toolkit with a strong backend focus.</p>
+    <div class="grid skills">
+      <div class="skill"><h3>Backend</h3><p>PHP · Laravel · CodeIgniter · WordPress</p></div>
+      <div class="skill"><h3>Frontend</h3><p>HTML5 · CSS3 · JavaScript · jQuery · AJAX</p></div>
+      <div class="skill"><h3>Database</h3><p>MySQL · Query Optimization · Database Design</p></div>
+      <div class="skill"><h3>Development</h3><p>REST APIs · MVC · OOP · Git · GitHub · Postman</p></div>
+    </div>
+  </div></section>
+
+  <section id="experience"><div class="container">
+    <h2 class="section-title">Experience</h2>
+    <div class="experience">
+      <article class="job"><time>07/2023 — Present</time><div><h3>PHP Developer · INTERSMART</h3><div class="company">Software development company</div><ul><li>Developed a full-featured e-commerce platform with product variants, cart and wishlist functionalities.</li><li>Developing robust PHP applications and APIs.</li><li>Collaborating with team members to define and implement features.</li></ul></div></article>
+      <article class="job"><time>07/2022 — 06/2023</time><div><h3>Laravel Developer · PENTACODES LLP</h3><div class="company">Software development company specializing in Laravel</div><ul><li>Developed web applications using Laravel framework.</li><li>Ensured application performance and optimization.</li></ul></div></article>
+      <article class="job"><time>02/2020 — 06/2022</time><div><h3>Web Developer · HEXWHALE INTERACTIVE LLP</h3><div class="company">Web development agency providing custom solutions</div><ul><li>Created efficient web solutions for various clients.</li><li>Maintained and updated existing web applications.</li></ul></div></article>
+      <article class="job"><time>05/2019 — 02/2020</time><div><h3>Backend Developer · GLINJOS INNOVATIONS</h3><div class="company">Software solutions provider</div><ul><li>Developed backend services and APIs.</li><li>Collaborated with frontend developers for smooth integration.</li></ul></div></article>
+    </div>
+  </div></section>
+
+  <section id="projects"><div class="container">
+    <h2 class="section-title">Key Projects</h2>
+    <p class="section-intro">Selected projects from e-commerce, education and healthcare domains.</p>
+    <div class="grid projects">
+      <article class="card"><h3>Aman Perfumes</h3><p>Full-featured e-commerce platform in Laravel & MySQL with product variants, shopping cart and wishlist functionality.</p><span class="tag">Laravel</span><span class="tag">MySQL</span></article>
+      <article class="card"><h3>Medical Trust College</h3><p>College admission portal supporting online applications, mark list normalization, automated rank list generation and allotment.</p><span class="tag">Admission Portal</span><span class="tag">Automation</span></article>
+      <article class="card"><h3>Pushpagiri Medical College</h3><p>CMS-based institutional website with content management features for scalability and easier updates.</p><span class="tag">CMS</span></article>
+      <article class="card"><h3>AL Masar Al Saree</h3><p>Bulk product purchase and bidding system enabling competitive user bidding and order management.</p><span class="tag">Bidding</span><span class="tag">E-commerce</span></article>
+      <article class="card"><h3>Christ College</h3><p>CMS-driven online application system for UG, PG and Health courses with admission process automation.</p><span class="tag">CMS</span><span class="tag">Admissions</span></article>
+      <article class="card"><h3>DFD</h3><p>E-commerce platform with date-based product selection and admin-controlled scheduling/blocking for deliveries.</p><span class="tag">E-commerce</span><span class="tag">Scheduling</span></article>
+      <article class="card"><h3>Health Deliver Asia</h3><p>Hospital service portal with package booking and doctor appointment scheduling based on date and time slots.</p><span class="tag">Healthcare</span><span class="tag">Appointments</span></article>
+    </div>
+  </div></section>
+
+  <section id="education"><div class="container">
+    <h2 class="section-title">Education</h2>
+    <div class="card"><h3>BCA</h3><p>Pilathara Co-Op Arts & Science College · 2016 — 2019</p><br><h3>VHSE — Computer Science</h3><p>GVHSS Neruvambram · 2014 — 2016</p></div>
+  </div></section>
+
+  <section id="contact"><div class="container"><div class="contact">
+    <div><div class="eyebrow">Let's connect</div><h2 class="section-title">Have a project in mind?</h2><p class="section-intro" style="margin:0">Feel free to reach out for web development opportunities and collaborations.</p></div>
+    <div class="actions" style="margin:0"><a class="btn primary" href="mailto:suchithlalthavam@gmail.com">suchithlalthavam@gmail.com</a><a class="btn secondary" href="tel:+919567799418">+91 9567799418</a></div>
+  </div></div></section>
+</main>
+
+<footer><div class="container footer-inner"><span>© <span id="year"></span> Suchith Lal K</span><span>PHP Developer · Kannur, Kerala, India</span></div></footer>
+<script>document.getElementById("year").textContent=new Date().getFullYear();</script>
+</body>
+</html>
